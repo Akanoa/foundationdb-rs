@@ -124,7 +124,7 @@ pub fn simulation_entrypoint(_attr: TokenStream, item: TokenStream) -> TokenStre
         }
         #[no_mangle]
         pub extern "C" fn workloadFactory(logger: *const u8) -> *const u8 {
-            unsafe { ::foundationdb_simulation::CPPWorkloadFactory(logger as *const _) }
+            unsafe { foundationdb_simulation::CPPWorkloadFactory(logger as *const _) }
         }
     )
     .into()
